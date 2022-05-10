@@ -1,0 +1,60 @@
+body{
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vn;
+}
+
+h1{
+  color: #333;
+
+  /* none 默认，定义带有小写字母和大写字母的标准文本 tys
+     capitalize 文本中的每个单词大写字母开头 Tys Will ...
+     lowercase 定义无大写字母，仅有小写字母 tys will ...
+     uppercase 定义无小 写字母，仅有大写字母 TYS WILL ...
+     inherit 规定应该从父元素继承text-transform属性的值
+  */
+  text-transform: uppercase;
+  font-size: 112px;
+  position: relative;
+}
+
+h1::after{
+  content: 'tys will be a big rock star';
+
+  /* color: transparent；的作用是将字体设置为透明。
+     类似于background-color:transparent；的作用，它是将背景色设置为透明。
+   */
+  color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background:  linear-gradient(to right,#FF69B3,#FE0000,#FFA401,#FFFF01,#008102,#40E1D2,#410098,#9400D4);;
+  
+  /*  background-clip 属性规定背景的绘制区域。
+      border-box　|　padding-box　|　content-box |  text(以文字的范围来裁剪背景图片.)
+   */
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  /* 
+    clip-path CSS 属性可以创建一个只有元素的部分区域可以显示的剪切区域。区域内的部分显示，区域外的隐藏。剪切区域是被引用内嵌的URL定义的路径或者外部svg的路径，或者作为一个形状。clip-path属性代替了现在已经弃用的剪切 clip属性
+    
+  */
+  clip-path: circle(100px at 0% 50%);
+  animation: light 5s infinite;
+}
+
+/* 定义动画 改变圆心的位置 */
+@keyframes light{
+  0%{
+    clip-path: circle(100px at 0% 50%);
+  }
+  50%{
+    clip-path: circle(100px at 100% 50%);
+  }
+  100%{
+    clip-path: circle(100px at 0% 50%);
+  }
+} 

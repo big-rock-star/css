@@ -1,8 +1,8 @@
-body {
+body{
   background: linear-gradient(to bottom, #2b5876, #09203f);
 }
 
-.loading {
+.loading{
   width: 200px;
   height: 200px;
   border-top: 10px solid #63a69f;
@@ -11,7 +11,7 @@ body {
   border-radius: 50%;
 }
 
-.loading::before,.loading::after {
+.loading::before,.loading::after{
   content: '';
   width: 200px;
   height: 200px;
@@ -27,7 +27,7 @@ body {
   transform: rotate(240deg);
 }
 
-.loading::after {
+.loading::after{
   border-top: 10px solid #f2e1ac;
   transform: rotate(120deg);
 }
@@ -42,13 +42,13 @@ body {
   animation: a2 2s linear infinite;
 }
 
-@keyframes a1 {
+@keyframes a1{
   to{
     transform: rotate(360deg);
   }
 }
 
-@keyframes a2 {
+@keyframes a2{
   to{
     transform: rotate(-360deg);
   }
