@@ -49,10 +49,9 @@
   border-top: 0;
 }
 
-.container a:hover::before,
-.container a:hover::after{
+.container a:hover{
   background-color: plum;
-  color: #000;
+  color: #FFF;
   box-shadow: 0 0 50px plum;
   -webkit-box-reflect: below 1px linear-gradient(transparent,rgba(0,0,0,0.3));
   /* 设置以上属性的延迟时间 */
